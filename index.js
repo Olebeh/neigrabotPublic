@@ -62,7 +62,7 @@ client.on('messageCreate', async message => {
       if (interaction.commandName == 'clean' || interaction.commandName == 'invite' || interaction.commandName == 'ping' || interaction.commandName == 'authors' || interaction.commandName == 'botinfo' || interaction.commandName == 'weather') {
         command.execute(interaction, client, global.player);
       } else {
-        command.execute(interaction, client, global.player);
+        command.execute(interaction, global.player, client);
       }
     } catch (error) {
       console.error(error);
