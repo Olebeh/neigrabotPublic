@@ -1,0 +1,29 @@
+{
+  "name": "christmas-groovus-abobus",
+  "main": "index.js",
+  "author": "Olebeh",
+  "version": "1.9.0",
+  "engines": {
+    "node": "16.10.0"
+  },
+  "repository": "https://github.com/Olebeh/neigrabot",
+  "description": "Ісходнік для Groovus Abobus",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.6.0",
+    "discord-api-types": "^0.24.0",
+    "discord-player": "^5.2.0",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "fs": "^0.0.1-security",
+    "genius-lyrics": "^4.3.4",
+    "ms": "^3.0.0-canary.1",
+    "opusscript": "^0.0.8",
+    "weather-js": "^2.0.0"
+  }
+}
