@@ -59,7 +59,7 @@ client.on('messageCreate', async message => {
       await interaction.deferReply().catch(() => {});
 
     try {
-      if (interaction.commandName == 'ban' || interaction.commandName == 'userinfo') {
+      if (interaction.commandName == 'clean' || interaction.commandName == 'invite' || interaction.commandName == 'ping' || interaction.commandName == 'authors' || interaction.commandName == 'botinfo' || interaction.commandName == 'weather') {
         command.execute(interaction, client, global.player);
       } else {
         command.execute(interaction, client, global.player);
