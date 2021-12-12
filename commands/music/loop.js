@@ -53,7 +53,7 @@ module.exports = {
 
             const embedQueueLoopSuccess = new MessageEmbed()
             .setColor(success ? 'DARK_VIVID_PINK' : 'RED')
-            .setDescription(success ? `❄️ Режим повторення **${queue.repeatMode === 0 ? 'вимкнено' : 'увімкнено'}**` : `Щось пішло не так`)
+            .setDescription(success ? `Режим повторення **${queue.repeatMode === 0 ? 'вимкнено' : 'увімкнено'}**` : `Щось пішло не так`)
 
             return interaction.editReply({ embeds: [embedQueueLoopSuccess] });
 
@@ -69,7 +69,7 @@ module.exports = {
 
             const embedTrackLoopSuccess = new MessageEmbed()
             .setColor(success ? 'DARK_VIVID_PINK' : 'RED')
-            .setDescription(success ? `❄️ Режим повторення **${queue.repeatMode === 0 ? 'вимкнено' : 'увімкнено'}**` : `Щось пішло не так`)
+            .setDescription(success ? `Режим повторення **${queue.repeatMode === 0 ? 'вимкнено' : 'увімкнено'}**` : `Щось пішло не так`)
 
             return interaction.editReply({ embeds: [embedTrackLoopSuccess] });
         };

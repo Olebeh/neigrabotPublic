@@ -9,7 +9,7 @@ module.exports = {
 
         const embedPing = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`❄️ Пінг: **${client.ws.ping}мс**`)
+        .setDescription(`Пінг: **${client.ws.ping}мс**`)
 
         interaction.editReply({ embeds: [embedPing] });
     },

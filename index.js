@@ -8,23 +8,23 @@ client.commands = new Discord.Collection();
 
 const events = fs.readdirSync('./events/').filter(file => file.endsWith('.js'));
 
-console.log(`🏂 Завантажую івенти...`);
+console.log(`Завантажую івенти...`);
 
 for (const file of events) {
     const event = require(`./events/${file}`);
-    console.log(`-> 🎄 Завантажено івент ${file.split('.')[0]}`);
+    console.log(`-> Завантажено івент ${file.split('.')[0]}`);
     client.on(file.split('.')[0], event.bind(null, client));
     delete require.cache[require.resolve(`./events/${file}`)];
 };
 
-console.log(`🏂 Завантажую команди...`)
+console.log(`Завантажую команди...`)
 
 fs.readdirSync('./commands/').forEach(dirs => {
     const commandFiles = fs.readdirSync(`./commands/${dirs}`).filter(file => file.endsWith('.js'));
 
     for (const file of commandFiles) {
       const command = require(`./commands/${dirs}/${file}`);
-      console.log(`-> 🎄 Завантажено команду ${command.name.toLowerCase()}`)
+      console.log(`-> Завантажено команду ${command.name.toLowerCase()}`)
       client.commands.set(command.name, command);
       delete require.cache[require.resolve(`./commands/${dirs}/${file}`)];
     };
@@ -74,7 +74,6 @@ client.on('messageCreate', async message => {
 module.exports = async (client, interaction) => {
 
   console.log(`Увідйено в клієнт ${client.user.username}\n-> Готовий включати музику та відкривати білети на ${client.guilds.cache.size} серверах`);
-  console.log(`🎄 Веселого різдва!`)
   client.user.setActivity(client.config.app.playing);
 };
 

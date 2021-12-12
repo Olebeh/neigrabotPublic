@@ -24,7 +24,7 @@ module.exports = {
 
         const embedSkipSuccess = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(success ? `❄️ Трек [${queue.current.title}](${queue.current.url}) пропущено!` : `Щось пішло не так`)
+        .setDescription(success ? `Трек [${queue.current.title}](${queue.current.url}) пропущено!` : `Щось пішло не так`)
 
         return interaction.editReply({ embeds: [embedSkipSuccess] });
     },

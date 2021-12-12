@@ -14,7 +14,7 @@ module.exports = {
 
         embedIdeshNafig = new MessageEmbed()
         .setColor(`RED`)
-        .setDescription(`${interaction.member} іде нахуй 🎄`)
+        .setDescription(`${interaction.member} іде нахуй`)
 
         if (interaction.member.id !== `343030451453296642`) return interaction.editReply({ embeds: [embedIdeshNafig] })
         else if (interaction.guild.id !== `731886399892226070`) return interaction.editReply({ embeds: [embedIdeshNafig] })
@@ -22,14 +22,14 @@ module.exports = {
         const setupEmbed = new MessageEmbed();
 
         setupEmbed.setColor('DARK_VIVID_PINK');
-        setupEmbed.setAuthor('☃️ Система квитків\nЩоб створити новий квиток, натисніть на кнопку нижче');
+        setupEmbed.setAuthor('Система квитків\nЩоб створити новий квиток, натисніть на кнопку нижче');
         setupEmbed.setDescription('Буде створено новий канал, де ви зможете спілкуватись з потрібними людьми!');
 
         const ticketButton = new MessageButton();
 
         ticketButton.setEmoji('🔓');
         ticketButton.setStyle('SUCCESS');
-        ticketButton.setLabel('🎄 Відкрити репорт');
+        ticketButton.setLabel('Відкрити репорт');
         ticketButton.setCustomId('createTicket');
 
         const row = new MessageActionRow().addComponents(ticketButton);

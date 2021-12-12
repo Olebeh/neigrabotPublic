@@ -23,7 +23,7 @@ module.exports = {
 
         const embedPausedSuccessful = new MessageEmbed()
         .setColor(success ? `DARK_VIVID_PINK` : `RED`)
-        .setDescription(success ? `❄️ Трек [${queue.current.title}](${queue.current.url}) зупинено!` : `Трек і так зупинено. Можливо ви мали наувазі \`/resume\`?`)
+        .setDescription(success ? `Трек [${queue.current.title}](${queue.current.url}) зупинено!` : `Трек і так зупинено. Можливо ви мали наувазі \`/resume\`?`)
 
         return interaction.editReply({ embeds: [embedPausedSuccessful] });
     },

@@ -43,7 +43,7 @@ module.exports = {
 
         const embedJumpedSuccessful = new MessageEmbed()
         .setColor('RED')
-        .setDescription(`❄️ Трек переміщено на першу позицію!`)
+        .setDescription(`Трек переміщено на першу позицію!`)
 
         await queue.jump(args - 1)
 

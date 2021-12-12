@@ -38,7 +38,7 @@ module.exports = {
 
         const embedRemovedSuccessful = new MessageEmbed()
         embedRemovedSuccessful.setColor('DARK_VIVID_PINK')
-        embedRemovedSuccessful.setDescription(`❄️ Вилучено пісню з черги!`)
+        embedRemovedSuccessful.setDescription(`Вилучено пісню з черги!`)
         if (queue.tracks.length < args) embedRemovedSuccessful.setDescription(`В черзі немає стільки треків!`)
 
         queue.tracks.splice(args - 1, 1)

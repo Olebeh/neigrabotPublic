@@ -23,7 +23,7 @@ module.exports = {
         queue.destroy();
         const embedStop = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`❄️ Музику зупинено!`)
+        .setDescription(`Музику зупинено!`)
         interaction.editReply({ embeds: [embedStop] });
     },
 };

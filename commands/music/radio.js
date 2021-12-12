@@ -48,7 +48,7 @@ module.exports = {
 
         const embedPlaying = new MessageEmbed()
         .setColor(`DARK_VIVID_PINK`)
-        .setDescription(`❄️ Підключено до радіостанції!`)
+        .setDescription(`Підключено до радіостанції!`)
 
         await queue.clear()
         await queue.skip()

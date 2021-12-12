@@ -46,7 +46,7 @@ module.exports = {
 
     const embedShuffleSuccess = new MessageEmbed()
       .setColor('DARK_VIVID_PINK')
-      .setDescription(`❄️ Перемішано **${queue.tracks.length}** піс${pluralizeUkr(queue.tracks.length, 'ню', 'ні', 'ень')}!`)
+      .setDescription(`Перемішано **${queue.tracks.length}** піс${pluralizeUkr(queue.tracks.length, 'ню', 'ні', 'ень')}!`)
 
     return interaction.editReply({ embeds: [embedShuffleSuccess] });
   },

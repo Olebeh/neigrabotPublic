@@ -34,10 +34,6 @@ module.exports = {
                     name: 'vibrato',
                     value: 'vibrato'
                 },
-                {
-                    name: 'disable',
-                    value: ''
-                },
             ],
         },
     ],
@@ -73,7 +69,7 @@ module.exports = {
 
         const embedFilterSuccessful = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`❄️ Фільтр ${filter} **${queue.getFiltersEnabled().includes(filter) ? 'завантажується...' : 'вимикається...'}**\n***Примітка:** чим довша музика, тим більше часу візьме завантаження*`)
+        .setDescription(`Фільтр ${filter} **${queue.getFiltersEnabled().includes(filter) ? 'завантажується...' : 'вимикається...'}**\n***Примітка:** чим довша музика, тим більше часу візьме завантаження*`)
 
         interaction.editReply({ embeds: [embedFilterSuccessful] });
     },

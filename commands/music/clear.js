@@ -30,7 +30,7 @@ module.exports = {
 
         const embedQueueCleared = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`☃️ Чергу очищено!`)
+        .setDescription(`Чергу очищено!`)
 
         interaction.editReply({ embeds: [embedQueueCleared] });
     },

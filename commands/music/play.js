@@ -7,7 +7,7 @@ module.exports = {
     options: [
       {
         name: 'джерело',
-        type: 3, // 'STRING' Type
+        type: 3,
         description: 'Назва або посилання на трек',
         required: true,
       },

@@ -50,7 +50,7 @@ module.exports = {
 
         const embedSuccessful = new MessageEmbed()
         .setColor(`DARK_VIVID_PINK`)
-        .setDescription(`❄️ Успішно видалено ${amount} повідомлен${pluralizeUkr(amount, `ня`, `ня`, `ь`)}\n***Повідолмення старші 14-ти днів не можуть бути видаленими***`)
+        .setDescription(`Успішно видалено ${amount} повідомлен${pluralizeUkr(amount, `ня`, `ня`, `ь`)}\n***Повідолмення старші 14-ти днів не можуть бути видаленими***`)
         if (amount === 99) interaction.channel.bulkDelete(amount, true);
         else interaction.channel.bulkDelete(amount + 1, true);
         await interaction.channel.send({ embeds: [embedSuccessful] }).then(msg => {setTimeout(() => msg.delete().catch(e => console.log(`Повідолмення, яке я мав видалити щезло само (${e})`)), 5000)

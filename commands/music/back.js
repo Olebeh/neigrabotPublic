@@ -30,7 +30,7 @@ module.exports = {
 
         const embedBackSuccessful = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`❄️ Зараз відтворюється **попередній** трек!`)
+        .setDescription(`Зараз відтворюється **попередній** трек!`)
 
         interaction.editReply({ embeds: [embedBackSuccessful] });
     },

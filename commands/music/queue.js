@@ -73,10 +73,10 @@ module.exports = {
 
         embedPaginated.setColor('DARK_VIVID_PINK');
         embedPaginated.setThumbnail(interaction.guild.iconURL({ size: 2048, dynamic: true }));
-        embedPaginated.setAuthor(`☃️ Черга - ${interaction.guild.name} ${methods[queue.repeatMode]}`, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
+        embedPaginated.setAuthor(`Черга - ${interaction.guild.name} ${methods[queue.repeatMode]}`, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
         const tracksPaginated = queue.tracks.map((track, i) => `${i + 1} - [${track.title}](${track.url}) | ${track.author} | ${track.requestedBy}`);
         const nextSongsPaginated = songs > lastTrackInPage ? `І ще **${songs - lastTrackInPage}** інш${pluralizeUkr(songs - lastTrackInPage, `а`, `і`, `их`)} піс${pluralizeUkr(songs - lastTrackInPage, `ня`, `ні`, `ень`)}\n` : `Всього **${songs}** піс${pluralizeUkr(songs, `ня`, `ні`, `ень`)}\n`;
-        embedPaginated.setDescription(`${page === 1 ? `❄️ Зараз грає [${queue.current.title}](${queue.current.url}) | ${queue.current.author}\n**Наступні:**\n\n` : ``}${tracksPaginated.slice(firstTrackInPage, lastTrackInPage).join('\n')}\n\n${nextSongsPaginated}\nСторінка **${page}/${maxPage}** 🎄`);
+        embedPaginated.setDescription(`${page === 1 ? `Зараз грає [${queue.current.title}](${queue.current.url}) | ${queue.current.author}\n**Наступні:**\n\n` : ``}${tracksPaginated.slice(firstTrackInPage, lastTrackInPage).join('\n')}\n\n${nextSongsPaginated}\nСторінка **${page}/${maxPage}**`);
         embedPaginated.setTimestamp();
         embedPaginated.setFooter('Найкращий музичний бот. Спеціально для Неігри', interaction.member.avatarURL({ dynamic: true }));
 

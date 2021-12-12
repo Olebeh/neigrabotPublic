@@ -7,7 +7,7 @@ module.exports = {
     options: [
       {
         name: 'запит',
-        type: 3, // 'STRING' Type
+        type: 3,
         description: 'Назва треку',
         required: true,
       },
@@ -43,7 +43,7 @@ module.exports = {
         const embed = new MessageEmbed();
 
         embed.setColor('DARK_VIVID_PINK');
-        embed.setAuthor(`☃️ Результати для ${args}`, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
+        embed.setAuthor(`Результати для ${args}`, client.user.displayAvatarURL({ size: 1024, dynamic: true }));
 
         const maxTracks = res.tracks.slice(0, 10);
 

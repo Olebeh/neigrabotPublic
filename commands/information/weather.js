@@ -30,7 +30,7 @@ module.exports = {
 
         const weatherinfo = new Discord.MessageEmbed()
         weatherinfo.setDescription(`**${current.skytext}**`)
-        weatherinfo.setAuthor(`🌨️ Прогноз погоди в ${current.observationpoint}`)
+        weatherinfo.setAuthor(`Прогноз погоди в ${current.observationpoint}`)
         weatherinfo.setThumbnail(current.imageUrl)
         weatherinfo.setColor('DARK_VIVID_PINK')
         weatherinfo.addField('Часовий пояс', `UTC${location.timezone}`, true)

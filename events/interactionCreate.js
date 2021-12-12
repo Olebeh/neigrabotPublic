@@ -17,19 +17,19 @@ module.exports = async (client, int, interaction, message) => {
             selectMenu.setPlaceholder('Виберіть причину');
             selectMenu.addOptions([
                 {
-                    emoji: '☃️',
+                    emoji: '🐎',
                     label: 'Суд',
                     description: 'Поскаржитись на якогось учасника',
                     value: 'newTicket_Суд'
                 },
                 {
-                    emoji: '❄️',
+                    emoji: '🦙',
                     label: 'Допомога',
                     description: 'Потрібна допомога',
                     value: 'newTicket_Помощь'
                 },
                 {
-                    emoji: '🏂',
+                    emoji: '🐛',
                     label: 'Інше',
                     description: 'Неозначена причина/немає в переліку',
                     value: 'newTicket'
@@ -44,9 +44,9 @@ module.exports = async (client, int, interaction, message) => {
         case 'newTicket': {
             const reason = int.values[0].split('_')[1];
 
-            const channel = int.guild.channels.cache.find(x => x.name === `🎄︱квиток-${int.member.id}`); 
+            const channel = int.guild.channels.cache.find(x => x.name === `📢︱квиток-${int.member.id}`); 
             if (!channel) {
-                await int.guild.channels.create(`🎄︱квиток-${int.member.id}`, {
+                await int.guild.channels.create(`📢︱квиток-${int.member.id}`, {
                     type: 'GUILD_TEXT',
                     topic: `Квиток відкрито користувачем ${int.member.user.username}${reason ? ` (${reason})` : ''} ${new Date(Date.now()).toLocaleString()}`,
                     permissionOverwrites: [
@@ -73,12 +73,12 @@ module.exports = async (client, int, interaction, message) => {
                     ]
                 });
 
-                const channel = int.guild.channels.cache.find(x => x.name === `🎄︱квиток-${int.member.id}`);
+                const channel = int.guild.channels.cache.find(x => x.name === `📢︱квиток-${int.member.id}`);
 
                 const ticketEmbed = new MessageEmbed();
 
                 ticketEmbed.setColor('DARK_VIVID_PINK');
-                ticketEmbed.setAuthor(`Квиток користувача ${int.member.user.username}, причина:${reason ? ` ${reason}` : ' немає'} ☃️`);
+                ticketEmbed.setAuthor(`Квиток користувача ${int.member.user.username}, причина:${reason ? ` ${reason}` : ' немає'}`);
                 ticketEmbed.setDescription('Щоб закрити квиток, натисніть на кнопку нижче');
 
                 const closeButton = new MessageButton();
@@ -115,7 +115,7 @@ module.exports = async (client, int, interaction, message) => {
 
                 const embedDone = new MessageEmbed()
                 .setColor(`DARK_VIVID_PINK`)
-                .setDescription(`Дякуюємо за репорт! Ваша анкета була надіслана суддям, очікуйте її підтвердження! Настисніть нище аби видалити квиток\nВеселого різдва! 🎄`)
+                .setDescription(`Дякуюємо за репорт! Ваша анкета була надіслана суддям, очікуйте її підтвердження! Настисніть нище аби видалити квиток`)
 
                 const filter = m => !m.author.bot
 

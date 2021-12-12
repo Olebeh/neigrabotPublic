@@ -43,7 +43,7 @@ module.exports = {
 	  const lyrics = await firstSong.lyrics();
 
     const embed = new MessageEmbed()
-    .setTitle(`☃️ Текст | ${queue.current.title} - ${interaction.guild.name}`)
+    .setTitle(`Текст | ${queue.current.title} - ${interaction.guild.name}`)
     .setDescription(lyrics)
     .setColor('DARK_VIVID_PINK')
     .setAuthor(client.user.username, client.user.displayAvatarURL({ size: 1024, dynamic: true }))

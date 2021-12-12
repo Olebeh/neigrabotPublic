@@ -21,13 +21,13 @@ module.exports = {
 
         const embedMessageDMS = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`☃️ Назва треку [${queue.current.title}](${queue.current.url}). Збережено з сервера **${interaction.guild.name}**`)
+        .setDescription(`Назва треку [${queue.current.title}](${queue.current.url}). Збережено з сервера **${interaction.guild.name}**`)
 
         interaction.member.send({ embeds: [embedMessageDMS] }).then(() => {
 
         const embedMessagedDMS = new MessageEmbed()
         .setColor('DARK_VIVID_PINK')
-        .setDescription(`🎄 Перевірте свій приват!`)
+        .setDescription(`Перевірте свій приват!`)
 
             interaction.editReply({ embeds: [embedMessagedDMS] });
         }).catch(error => {

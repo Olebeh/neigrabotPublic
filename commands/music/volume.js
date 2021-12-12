@@ -54,7 +54,7 @@ module.exports = {
 
         const embedVolumeSet = new MessageEmbed()
         .setColor(success ? 'DARK_VIVID_PINK' : 'RED')
-        .setDescription(success ? `❄️ Встановлено гучність **${vol}** з **${maxVol}**` : `Щось пішло не так`)
+        .setDescription(success ? `Встановлено гучність **${vol}** з **${maxVol}**` : `Щось пішло не так`)
 
         return interaction.editReply({ embeds: [embedVolumeSet] });
     },
